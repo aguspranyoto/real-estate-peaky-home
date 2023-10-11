@@ -1,0 +1,126 @@
+$black: #242424;
+$white: #fff;
+$blue: #328ae2;
+
+:root {
+  --text-color-primary: #{$white};
+  --text-color-secondary: #{$black};
+  --text-color-blue: #{$blue};
+  --button-color-primary: #{$blue};
+}
+
+.wrapper {
+  background-color: #fff;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  margin: 10px auto;
+  height: 48px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-color-secondary);
+
+  &:hover {
+    color: var(--text-color-blue);
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  display: none;
+  cursor: pointer;
+
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  li {
+    list-style-type: none;
+    &:hover {
+      color: var(--text-color-blue);
+    }
+  }
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+}
+
+.entry {
+  display: flex;
+  gap: 10px;
+  display: none;
+
+  button {
+    padding: 6px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  :nth-child(1) {
+    color: var(--text-color-secondary);
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: var(--text-color-blue);
+    }
+  }
+
+  :nth-child(2) {
+    color: var(--text-color-primary);
+    border: 1px solid var(--button-color-primary);
+    background-color: var(--button-color-primary);
+
+    &:hover {
+      color: var(--text-color-secondary);
+      border: 1px solid var(--text-color-blue);
+      background-color: transparent;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+    }
+  }
+}
+
+/* Media Query untuk Tablet dan Desktop */
+@media (min-width: 769px) {
+}
+
+@media (min-width: 896px) {
+  .menu,
+  .entry {
+    display: block; /* Menu ditampilkan pada perangkat tablet dan desktop */
+  }
+
+  .menu-icon {
+    display: none; /* Ikon hamburger disembunyikan pada perangkat tablet dan desktop */
+  }
+}
+
+@media (min-width: 1024px) {
+}
